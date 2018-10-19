@@ -19,12 +19,11 @@ sentiments that are evoked in people. The questions our visualization is designe
 
 **Selecting themes list** ​: We forked a Kaggle data analysis Jupyter Notebook that organized Ted Talk ‘tags’ (we refer to these as ​ themes ​) in descending order of number. We selected the top 9 themes from this list.
 
-**Selecting sentiments list:** ​ Using the same Jupyter Notebook, we determined the most frequently used ‘ratings.’ We refer to these as ​ sentiments ​ since they connote viewers’ emotions. The top 5 sentiments
+**Selecting sentiments list:** ​ Using the same Jupyter Notebook, we determined the most frequently used ‘ratings.’ We refer to these as ​ sentiments ​ since they connote viewers’ emotions. The top 5 sentiments were ‘beautiful,’ ‘fascinating,’ ‘inspiring,’ ‘informative,’ and ‘funny’. We also included ‘ok’ to offset the entirely positive aforementioned ones.
 
-were ‘beautiful,’ ‘fascinating,’ ‘inspiring,’ ‘informative,’ and ‘funny’. We also included ‘ok’ to offset the
-entirely positive aforementioned ones.
 **Filtering by theme:** ​ mainTag in utils.js selects from a video’s list of associated themes the ones that
 match our list. mainTag then projects the data into the necessary columns.
+
 **Reducing and calculating:** ​ Grouping videos (groupBy) by theme was necessary to determining the
 proportion of sentiments within each theme. calculateSentiments sums all votes a theme received. It then
 divides each sentiment by this total, and reduces the data to the sentiments from our select list. We
