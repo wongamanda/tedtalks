@@ -3,6 +3,8 @@ Spring 2018
 
 # How do Ted Talks make us feel?
 
+See wiki to view the visualization ~
+
 ## Context and Purpose
 
 Our visualization considers eleven years’ worth of Ted Talks videos, from June 2006 through
