@@ -1,6 +1,3 @@
-// if the data you are going to import is small, then you can import it using es6 import
-// import MY_DATA from './app/data/example.json'
-// (I tend to think it's best to use screaming snake case for imported json)
 const domReady = require('domready');
 import {select} from 'd3-selection';
 import {scaleOrdinal} from 'd3-scale';
@@ -11,7 +8,6 @@ import {hierarchy} from 'd3-hierarchy';
 import {mainTag, calculateSentiments, groupBy} from './utils.js';
 
 domReady(() => {
-  // this is just one example of how to import data. there are lots of ways to do it!
   csv('./data/ted_main.csv')
     .then(data => myVis(data));
 });
