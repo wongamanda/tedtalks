@@ -5,6 +5,8 @@ Spring 2018
 
 See wiki to view the visualization ~
 
+Processed and visualized data from Kaggle
+
 ## Context and Purpose
 
 Our visualization considers eleven years’ worth of Ted Talks videos, from June 2006 through
