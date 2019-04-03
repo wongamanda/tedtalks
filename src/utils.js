@@ -41,7 +41,7 @@ export function calculateSentiments(groupedData, sentiments) {
 	// for each sentiment, add to a total and then divide each by that total
   return Object.keys(groupedData).reduce((acc, key) => {
     const counts = {};
-    let totalo = 0;
+    let totalVideos = 0;
     let numVideos = 0;
     const cur = groupedData[key];
     cur.forEach(row => {
@@ -52,7 +52,7 @@ export function calculateSentiments(groupedData, sentiments) {
         }
         counts[rating.name] += rating.count;
         if (sentiments.includes(rating.name)) {
-          totalo = totalo + rating.count;
+          totalVideos = totalVideos + rating.count;
         }
       });
     });
@@ -60,8 +60,8 @@ export function calculateSentiments(groupedData, sentiments) {
       name: key,
       children: Object.keys(counts).map(rowkey => {
         return {name: rowkey,
-          catProportion: ((counts[rowkey] / totalo) * 100).toFixed(2),
-          proportion: Math.round((counts[rowkey] / totalo) * numVideos * 8),
+          catProportion: ((counts[rowkey] / totalVideos) * 100).toFixed(2),
+          proportion: Math.round((counts[rowkey] / totalVideos) * numVideos * 8),
           sentimento: sentiments.includes(rowkey)
         };
       })
